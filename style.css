@@ -1,0 +1,152 @@
+/* style.css*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  line-height: 1.5;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("fish gif.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.timer-circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #ffffff;
+  border: 8px solid #007afb;
+}
+
+.control-buttons {
+  margin-top: 5px;
+  margin-right: 75px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.control-buttons button {
+  background-color: #007afb;
+  color: #fafafa;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-buttons button:hover {
+  background-color: #ec4455;
+  transition: background-color 0.3s;
+}
+
+#expandButton {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  bottom: 3.5%;
+  right: 2%;
+  z-index: 9999;
+  
+}
+
+.spotify {
+  right: 20px;
+}
+
+.pomodoro {
+  left: 20px;
+}
+
+#expandedIframe {
+  width: 25%;
+  /* Adjust width to fill 25% of the screen */
+  height: 352px;
+  /* Adjust height as needed */
+  border: none;
+  padding: 20px;
+  /* Add padding */
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9998;
+  transition: width 0.5s;
+  /* Smooth transition for width */
+}
+
+.expanded {
+  display: block !important;
+}
+
+#bg {
+  position: fixed;
+  background-image: url(https://replit.com/@lgarciasanchez/AthenaHacksTeam7#fish%20gif.gif);
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+#closeButton {
+  position: absolute;
+  right: 2%;
+  bottom: 3.5%;
+  top: 30px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#expandPomodoro {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  
+  z-index: 9999;
+  
+ 
+  bottom: 20px;
+  left: 200px;
+  
+}
+
+#expandPomFrame {
+  width: 15%;
+  /* Adjust width to fill 25% of the screen */
+  height: 20px;
+  /* Adjust height as needed */
+  border: none;
+  padding: 10px;
+  /* Add padding */
+  display: none;
+  position: fixed;
+  justify-content: center;
+  bottom: 20px;
+  left: 140px;
+  z-index: 9998;
+  /* Optional: add background color */
+  transition: width 0.5s;
+  /* Smooth transition for width */
+}
+
+#todoButton {
+  position: fixed;
+  bottom: 20px;
+  right: 400px;
+  z-index: 9998;
+}
+
+#tasks-management {
+  right: 400px;
+  bottom: 50px;
+  background-color: #fafafa;
+}

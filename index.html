@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, 
+				initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'>
+  </script>
+  <style>
+    #todo-container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .task input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1 style="color:white" id="bg">
+      <p1>Hacking Kitties</p1>
+    </h1>
+
+    <div>
+      <div class="pomodoro"><img src="yellow.png" id="expandPomodoro" onclick="togglePomo()"></div>
+      <div id="expandPomFrame" style="border-radius:12px">
+        <div class="timer-circle">
+          <div>
+            <span id="timer">25:00</span>
+          </div>
+        </div>
+        <div class="control-buttons">
+          <button onclick="togglePauseResume()">
+            Pause
+          </button>
+          <button onclick="restartTimer()">
+            Restart
+          </button>
+          <button onclick="chooseTime()">
+            Choose Time
+          </button>
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </div>
+
+
+    <div>
+      <div class="spotify"><img src="spotify.png" id="expandButton" onclick="toggleExpand()"></div>
+      <!-- <button id="expandButton" onclick="toggleExpand()">
+        Expand Playlist
+      </button> -->
+      <iframe id="expandedIframe" style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/1WCfQw6IJMlMWYtQWT8DIJ?utm_source=generator" width="50%"
+        height="352" frameBorder="0" allowfullscreen="20"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <!-- Tasks List -->
+    <div id="todo-container">
+      <button id="todoButton" onclick="toggleList()">Task List</button>
+      <div id="tasks-management">
+        <div id="tasks-container" style="display: none;">
+          <div id="add-task-elements" style="display: none;">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+            <div id="tasksHolder">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
